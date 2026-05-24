@@ -661,34 +661,50 @@ elif section == "🔄 OG vs Taylor's Version":
 # ══════════════════════════════════════════════════════════════════════════════
 # 5 — PODCAST
 # ══════════════════════════════════════════════════════════════════════════════
-elif section == "🎙️ Swifting Podcast":
+elif section == "🎙️ Podcast Swifting":
     st.markdown("# 🎙️ Swifting")
-    st.markdown("*Que Taylor (no) se entere de esto. 🧡*")
+    st.markdown("*El podcast definitivo para Swifties.*")
     st.divider()
 
-    SPOTIFY_URL = "https://open.spotify.com/show/629KoqnqWiz79IOi5zjW8i"  # ← Pega aquí la URL de Spotify del podcast
+    # ── Spotify embed ─────────────────────────────────────────────────────────
+    st.markdown("### Escúchanos en Spotify")
+    st.markdown(
+        '<iframe src="https://open.spotify.com/embed/show/629KoqnqWiz79IOi5zjW8i" '
+        'width="100%" height="352" frameborder="0" allowtransparency="true" '
+        'allow="encrypted-media" style="border-radius:12px"></iframe>',
+        unsafe_allow_html=True
+    )
 
-    if SPOTIFY_URL:
-        embed_url = SPOTIFY_URL.replace("open.spotify.com","open.spotify.com/embed").replace("/show/","/embed/show/")
-        st.markdown(
-            f'<iframe src="{embed_url}" width="100%" height="352" frameborder="0" '
-            'allowtransparency="true" allow="encrypted-media" style="border-radius:12px"></iframe>',
-            unsafe_allow_html=True
-        )
-    else:
+    st.divider()
+
+    # ── Links ─────────────────────────────────────────────────────────────────
+    c1, c2, c3 = st.columns(3)
+    with c1:
         st.markdown("""
-        <div style="background:#f8f4ff;border:1px solid #d4b8ff;border-radius:12px;padding:32px;text-align:center">
-            <div style="font-size:3rem">🎙️</div>
-            <h3 style="margin:12px 0 8px">Swifting Podcast</h3>
-            <p style="color:#666;margin:0">Para activar el embed de Spotify, abre <code>mainV2.py</code> en GitHub<br>
-            y pega la URL del podcast en la variable <code>SPOTIFY_URL</code></p>
-        </div>
-        """, unsafe_allow_html=True)
-        st.markdown("")
-        st.info("**¿Cómo encontrar la URL?** → Ve al podcast en Spotify → clic en ··· → Share → Copy link")
+        <a href="https://open.spotify.com/show/629KoqnqWiz79IOi5zjW8i" target="_blank"
+        style="display:block;background:#1DB954;color:white;text-align:center;
+        padding:12px;border-radius:10px;text-decoration:none;font-weight:600;font-size:0.9rem">
+        🎧 Spotify
+        </a>""", unsafe_allow_html=True)
+    with c2:
+        st.markdown("""
+        <a href="https://www.youtube.com/@swiftingpodcast" target="_blank"
+        style="display:block;background:#FF0000;color:white;text-align:center;
+        padding:12px;border-radius:10px;text-decoration:none;font-weight:600;font-size:0.9rem">
+        ▶️ YouTube
+        </a>""", unsafe_allow_html=True)
+    with c3:
+        st.markdown("""
+        <a href="https://www.instagram.com/swiftingpodcast/" target="_blank"
+        style="display:block;background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);
+        color:white;text-align:center;padding:12px;border-radius:10px;
+        text-decoration:none;font-weight:600;font-size:0.9rem">
+        📸 Instagram
+        </a>""", unsafe_allow_html=True)
 
     st.divider()
     st.markdown("""
-    **Swifting** es un podcast dedicado a analizar en profundidad la música, letras y eras de Taylor Swift.
-    Cada episodio desglosa un álbum, una canción o un momento icónico de su carrera. 🎵
+    **Swifting** es un podcast dedicado a analizar en profundidad la música,
+    letras y eras de Taylor Swift. Cada episodio desglosa un álbum, una canción
+    o un momento icónico de su carrera. 🎵
     """)
