@@ -663,78 +663,20 @@ elif section == "🔄 OG vs Taylor's Version":
 # ══════════════════════════════════════════════════════════════════════════════
 elif section == "🎙️ Podcast Swifting":
 
-    # Hero banner
-    st.markdown("""
-    <div style="
-        background: #111111;
-        border-radius: 16px;
-        padding: 48px 40px 40px;
-        text-align: center;
-        position: relative;
-        overflow: hidden;
-        margin-bottom: 8px;
-    ">
-        <!-- Stars decorativas -->
-        <div style="position:absolute;top:18px;left:32px;font-size:1.6rem;opacity:0.85">✦</div>
-        <div style="position:absolute;top:32px;left:80px;font-size:0.9rem;color:#E8521A;opacity:0.7">★</div>
-        <div style="position:absolute;top:14px;right:40px;font-size:1.4rem;opacity:0.85">✦</div>
-        <div style="position:absolute;top:36px;right:90px;font-size:0.8rem;color:#E8521A;opacity:0.7">★</div>
-        <div style="position:absolute;bottom:24px;left:60px;font-size:1rem;color:#E8521A;opacity:0.6">★</div>
-        <div style="position:absolute;bottom:20px;right:50px;font-size:1.2rem;opacity:0.6">✦</div>
+    st.markdown('<div style="background:#111;border-radius:16px;padding:40px;text-align:center;margin-bottom:12px">', unsafe_allow_html=True)
+    st.markdown('<p style="font-size:0.65rem;letter-spacing:4px;color:#E8521A;font-weight:700;margin:0">✦ &nbsp; PODCAST &nbsp; ✦</p>', unsafe_allow_html=True)
+    st.markdown('<p style="font-family:Georgia,serif;font-style:italic;font-size:3rem;color:white;margin:8px 0 4px">Swifting</p>', unsafe_allow_html=True)
+    st.markdown('<p style="color:#888;font-style:italic;margin:0">Que Taylor (no) se entere de esto. 🧡</p>', unsafe_allow_html=True)
+    st.markdown('</div>', unsafe_allow_html=True)
 
-        <p style="
-            font-family: Georgia, serif;
-            font-style: italic;
-            font-size: 3.2rem;
-            font-weight: 400;
-            color: white;
-            margin: 0 0 4px 0;
-            letter-spacing: 1px;
-        ">Swifting</p>
-        <p style="
-            font-size: 0.7rem;
-            letter-spacing: 4px;
-            text-transform: uppercase;
-            color: #E8521A;
-            margin: 0 0 20px 0;
-            font-weight: 600;
-        ">PODCAST</p>
-        <p style="
-            color: #aaa;
-            font-size: 1rem;
-            margin: 0;
-            font-style: italic;
-        ">Que Taylor (no) se entere de esto. 🧡</p>
-    </div>
-    """, unsafe_allow_html=True)
+    st.markdown('<div style="display:flex;gap:10px;margin:12px 0">', unsafe_allow_html=True)
+    col1, col2, col3, col4 = st.columns(4)
+    col1.markdown('<div style="background:#1a1a1a;border-radius:10px;padding:14px;text-align:center"><div style="font-size:1.5rem;font-weight:700;color:#E8521A">8</div><div style="font-size:0.68rem;color:#888;letter-spacing:1px;text-transform:uppercase">Temporadas</div></div>', unsafe_allow_html=True)
+    col2.markdown('<div style="background:#1a1a1a;border-radius:10px;padding:14px;text-align:center"><div style="font-size:1.5rem;font-weight:700;color:#E8521A">557</div><div style="font-size:0.68rem;color:#888;letter-spacing:1px;text-transform:uppercase">Posts</div></div>', unsafe_allow_html=True)
+    col3.markdown('<div style="background:#1a1a1a;border-radius:10px;padding:14px;text-align:center"><div style="font-size:1.5rem;font-weight:700;color:#E8521A">8.4K</div><div style="font-size:0.68rem;color:#888;letter-spacing:1px;text-transform:uppercase">Seguidores</div></div>', unsafe_allow_html=True)
+    col4.markdown('<div style="background:#1a1a1a;border-radius:10px;padding:14px;text-align:center"><div style="font-size:1.5rem;font-weight:700;color:#E8521A">31M+</div><div style="font-size:0.68rem;color:#888;letter-spacing:1px;text-transform:uppercase">Threads</div></div>', unsafe_allow_html=True)
 
-    # Stats bar
-    st.markdown("""
-    <div style="display:flex;gap:12px;margin:16px 0">
-        <div style="flex:1;background:#1a1a1a;border-radius:10px;padding:16px;text-align:center">
-            <div style="font-size:1.6rem;font-weight:700;color:#E8521A">8</div>
-            <div style="font-size:0.72rem;color:#888;text-transform:uppercase;letter-spacing:1px;margin-top:2px">Temporadas</div>
-        </div>
-        <div style="flex:1;background:#1a1a1a;border-radius:10px;padding:16px;text-align:center">
-            <div style="font-size:1.6rem;font-weight:700;color:#E8521A">557</div>
-            <div style="font-size:0.72rem;color:#888;text-transform:uppercase;letter-spacing:1px;margin-top:2px">Posts</div>
-        </div>
-        <div style="flex:1;background:#1a1a1a;border-radius:10px;padding:16px;text-align:center">
-            <div style="font-size:1.6rem;font-weight:700;color:#E8521A">8.4K</div>
-            <div style="font-size:0.72rem;color:#888;text-transform:uppercase;letter-spacing:1px;margin-top:2px">Seguidores</div>
-        </div>
-        <div style="flex:1;background:#1a1a1a;border-radius:10px;padding:16px;text-align:center">
-            <div style="font-size:1.6rem;font-weight:700;color:#E8521A">31M+</div>
-            <div style="font-size:0.72rem;color:#888;text-transform:uppercase;letter-spacing:1px;margin-top:2px">Threads</div>
-        </div>
-    </div>
-    """, unsafe_allow_html=True)
-
-    # Spotify embed
-    st.markdown("""
-    <p style="font-size:0.7rem;letter-spacing:3px;text-transform:uppercase;
-    color:#E8521A;font-weight:600;margin:24px 0 10px">— Escúchanos —</p>
-    """, unsafe_allow_html=True)
+    st.markdown('<p style="font-size:0.65rem;letter-spacing:3px;text-transform:uppercase;color:#E8521A;font-weight:600;margin:20px 0 8px">— Escúchanos —</p>', unsafe_allow_html=True)
 
     st.markdown(
         '<iframe src="https://open.spotify.com/embed/show/629KoqnqWiz79IOi5zjW8i" '
@@ -743,49 +685,11 @@ elif section == "🎙️ Podcast Swifting":
         unsafe_allow_html=True
     )
 
-    # Social links
-    st.markdown("""
-    <p style="font-size:0.7rem;letter-spacing:3px;text-transform:uppercase;
-    color:#E8521A;font-weight:600;margin:24px 0 12px">— Síguenos —</p>
-    """, unsafe_allow_html=True)
+    st.markdown('<p style="font-size:0.65rem;letter-spacing:3px;text-transform:uppercase;color:#E8521A;font-weight:600;margin:20px 0 10px">— Síguenos —</p>', unsafe_allow_html=True)
 
     c1, c2, c3 = st.columns(3)
-    with c1:
-        st.markdown("""
-        <a href="https://open.spotify.com/show/629KoqnqWiz79IOi5zjW8i" target="_blank"
-        style="display:flex;align-items:center;justify-content:center;gap:8px;
-        background:#1DB954;color:white;padding:13px 16px;border-radius:10px;
-        text-decoration:none;font-weight:600;font-size:0.88rem;letter-spacing:0.3px">
-        🎧 Spotify
-        </a>""", unsafe_allow_html=True)
-    with c2:
-        st.markdown("""
-        <a href="https://www.youtube.com/@swiftingpodcast" target="_blank"
-        style="display:flex;align-items:center;justify-content:center;gap:8px;
-        background:#FF0000;color:white;padding:13px 16px;border-radius:10px;
-        text-decoration:none;font-weight:600;font-size:0.88rem;letter-spacing:0.3px">
-        ▶️ YouTube
-        </a>""", unsafe_allow_html=True)
-    with c3:
-        st.markdown("""
-        <a href="https://www.instagram.com/swiftingpodcast/" target="_blank"
-        style="display:flex;align-items:center;justify-content:center;gap:8px;
-        background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);
-        color:white;padding:13px 16px;border-radius:10px;
-        text-decoration:none;font-weight:600;font-size:0.88rem;letter-spacing:0.3px">
-        📸 Instagram
-        </a>""", unsafe_allow_html=True)
+    c1.markdown('<a href="https://open.spotify.com/show/629KoqnqWiz79IOi5zjW8i" target="_blank" style="display:block;background:#1DB954;color:white;text-align:center;padding:12px;border-radius:10px;text-decoration:none;font-weight:600;font-size:0.85rem">🎧 Spotify</a>', unsafe_allow_html=True)
+    c2.markdown('<a href="https://www.youtube.com/@swiftingpodcast" target="_blank" style="display:block;background:#FF0000;color:white;text-align:center;padding:12px;border-radius:10px;text-decoration:none;font-weight:600;font-size:0.85rem">▶️ YouTube</a>', unsafe_allow_html=True)
+    c3.markdown('<a href="https://www.instagram.com/swiftingpodcast/" target="_blank" style="display:block;background:linear-gradient(45deg,#f09433,#dc2743,#bc1888);color:white;text-align:center;padding:12px;border-radius:10px;text-decoration:none;font-weight:600;font-size:0.85rem">📸 Instagram</a>', unsafe_allow_html=True)
 
-    # Quote
-    st.markdown("""
-    <div style="
-        background:#111;border-left:3px solid #E8521A;
-        border-radius:0 10px 10px 0;padding:18px 20px;margin-top:24px
-    ">
-        <p style="color:#E8521A;font-size:0.68rem;letter-spacing:3px;
-        text-transform:uppercase;margin:0 0 6px;font-weight:600">Amamos</p>
-        <p style="color:#ddd;font-size:0.95rem;margin:0;font-style:italic">
-        "el chismecito, hablar sin filtro y analizar intensamente cada una de sus canciones."
-        </p>
-    </div>
-    """, unsafe_allow_html=True)
+    st.markdown('<div style="background:#1a1a1a;border-left:3px solid #E8521A;border-radius:0 10px 10px 0;padding:16px 18px;margin-top:20px"><p style="color:#E8521A;font-size:0.65rem;letter-spacing:2px;text-transform:uppercase;margin:0 0 5px;font-weight:600">Amamos</p><p style="color:#ccc;font-size:0.9rem;margin:0;font-style:italic">"el chismecito, hablar sin filtro y analizar intensamente cada una de sus canciones."</p></div>', unsafe_allow_html=True)
