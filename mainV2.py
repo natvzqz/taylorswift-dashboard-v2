@@ -93,7 +93,7 @@ FEATURE_LABELS = {
 @st.cache_data
 def load_data():
     songs   = pd.read_csv("Taylor_Songs_Clean.csv")
-    albums  = pd.read_csv("Taylor_Albums.csv")
+    albums  = pd.read_csv("Taylor Albums.csv")
     songs["album_release"] = pd.to_datetime(songs["album_release"], errors="coerce")
     albums["album_release"] = pd.to_datetime(albums["album_release"], errors="coerce")
     songs["color"] = songs["album_name"].map(ERA_COLORS).fillna("#888888")
